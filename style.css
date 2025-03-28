@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%; 
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: #f14bb2 ;
+}
+
+.control {
+    position: relative; 
+    width: 80vmin;
+    height: 80vmin;
+    background-color: blue;
+    color: white;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    font-size: 4rem;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0 0.2);
+}
+.control span {
+    z-index: 1;
+}
+/* Default state */
+.control {
+    transform: scale(1);
+}
+/* Hover state */
+.control:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+/* Active state */
+.control:active {
+    transform: scale(0.9) rotate(-5deg);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .control {
+        width: 60vmin;
+        height: 60vmin;
+        font-size: 2rem;
+    }
+}
+@media (max-width: 400px) {
+    .control {
+        width: 50vmin;
+        height: 50vmin;
+        font-size: 1.5rem;
+    }
+}
