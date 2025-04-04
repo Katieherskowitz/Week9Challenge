@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad Libs Kids Adventure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="book">
+        <div class="page" id="page1">
+            <div class="frame">
+                <div class="page-content">
+                    <h1>Welcome to the Mad Libs Adventure!</h1>
+                    <p>Help create the silliest story ever! Get ready to fill in some fun words and laugh!</p>
+                    <button onclick="goToPage(2)" class="start-button">Start the Fun!</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="page2">
+            <div class="frame">
+                <div class="page-content">
+                    <h1>Let's Make a Fun Story!</h1>
+                    <p>Fill in the blanks to create a wacky story! Ready?</p>
+
+                    <div class="input-container">
+                        <label for="noun">A funny Noun (e.g., dinosaur, unicorn, rocket ship):</label>
+                        <input type="text" id="noun"><br>
+
+                        <label for="verb">An action Verb (e.g., jump, sing, dance):</label>
+                        <input type="text" id="verb"><br>
+
+                        <label for="adjective">A silly Adjective (e.g., wobbly, sparkling, magical):</label>
+                        <input type="text" id="adjective"><br>
+
+                        <label for="place">A magical Place (e.g., cloud, jungle, outer space):</label>
+                        <input type="text" id="place"><br>
+                    </div>
+
+                    <button onclick="generateStory()" class="create-story-button">Create My Story!</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="page3">
+            <div class="frame">
+                <div class="page-content">
+                    <h1>Your Mad Libs Story</h1>
+                    <p id="story"></p>
+                    <div class="buttons">
+                        <button onclick="goToPage(2)" class="create-new-button">Create Another Story!</button>
+                        <button onclick="goToPage(1)" class="end-button">End The Story</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
